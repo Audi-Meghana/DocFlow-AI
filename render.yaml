@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: docflow-api
+    env: node
+    plan: free
+    buildCommand: "cd server && npm install"
+    startCommand: "cd server && npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
+
+  - type: static
+    name: docflow-client
+    buildCommand: "cd client && npm install && npm run build"
+    staticPublishPath: client/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://docflow-api.onrender.com
