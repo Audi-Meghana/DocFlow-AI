@@ -1,0 +1,22 @@
+* **Phase 1: Planning & Architecture (ChatGPT)**
+* **What I did:** Prompted ChatGPT to outline the full-stack project structure, define Express.js backend routing, and set up the directory layout for the React frontend and Node.js backend.
+* **Output received:** A structured blueprint separating controllers, routes, storage utils, and React component folders.
+
+
+* **Phase 2: UI & Design System (Gemini AI)**
+* **What I did:** Used Gemini AI to design the visual aesthetic, modern Tailwind CSS classes, dashboard grid layouts, filter pills, and modal dialogs.
+* **Output received:** Clean Tailwind snippets and layout hierarchies that formed the core look and feel of the workspace dashboard.
+
+
+* **Phase 3: Core Coding & Implementation (GitHub Copilot & Claude)**
+* **What I did:** Leveraged Claude and Copilot for rapid component scaffolding, writing API service hooks with Axios, and integrating Mammoth.js for `.docx` and text file parsing.
+* **Output received:** Functional React components (`Dashboard.jsx`, modals) and Express backend controllers (`documentController.js`).
+
+
+* **Phase 4: Debugging & Edge-Case Handling (Claude & Copilot)**
+* **What I did:** Used AI assistants to diagnose real-time runtime errors like the Express `413 (Payload Too Large)` upload limit and backend `403 (Forbidden)` authorization blocks.
+* **Output received:** Troubleshooting guidance to adjust `express.json({ limit: "10mb" })` middleware and fix API header configurations.
+
+
+* **Phase 5: Human Override & Refinement**
+* **What I did:** Reviewed and modified AI-generated code to enforce strict security and state logic—specifically rewriting the document ownership check (`ownerId !== currentUserId`) so shared users couldn't illegally delete documents, and ensuring state-fetching accurately filtered owned versus shared files.
