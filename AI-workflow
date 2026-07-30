@@ -20,3 +20,14 @@
 
 * **Phase 5: Human Override & Refinement**
 * **What I did:** Reviewed and modified AI-generated code to enforce strict security and state logic—specifically rewriting the document ownership check (`ownerId !== currentUserId`) so shared users couldn't illegally delete documents, and ensuring state-fetching accurately filtered owned versus shared files.
+
+
+Here is a quick summary of what was prioritized in the architecture:
+
+* **Clean Full-Stack Separation:** Kept backend logic, controllers, and frontend React components completely decoupled for easier maintenance and debugging.
+* **Pragmatic File Handling:** Used Mammoth.js for fast `.docx` and text file parsing instead of building custom parsers from scratch.
+* **Strict Security & Ownership:** Enforced backend checks (`ownerId` verification) to control document deletion and sharing rights safely.
+* **Polished User Experience:** Focused on responsive Tailwind layouts, clear workspace filters, and toast notifications rather than complex real-time WebSockets.
+
+
+DEPLOYEMENT LINK: https://docflow-ai-client.onrender.com/
